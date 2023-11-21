@@ -25,7 +25,7 @@ const App = () => {
     <>
       <ThemeProvider theme={theme}>
         <Navbar />
-        <Home/>
+        {/* <Home /> */}
       </ThemeProvider>
     </>
   )

@@ -9,18 +9,19 @@ import {
   ListItemIcon,
   ListItemText,
 } from "@mui/material";
+
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from '@mui/icons-material/Close';
 import HomeIcon from '@mui/icons-material/Home';
 import WorkIcon from '@mui/icons-material/Work';
-import AnalyticsIcon from '@mui/icons-material/Analytics';
+// import AnalyticsIcon from '@mui/icons-material/Analytics';
 import InfoIcon from '@mui/icons-material/Info';
 import PhoneIcon from '@mui/icons-material/Phone';
 
 const pages = [
   { name: "Home", icon: <HomeIcon /> },
   { name: "Jobs", icon: <WorkIcon /> },
-  { name: "Programs", icon: <AnalyticsIcon /> },
+  // { name: "Programs", icon: <AnalyticsIcon /> },
   { name: "About Us", icon: <InfoIcon /> },
   { name: "Contact Us", icon: <PhoneIcon /> }
 ];
