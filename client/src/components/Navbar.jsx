@@ -2,6 +2,7 @@ import { React, useState } from 'react'
 import {
   AppBar,
   Button,
+  Link,
   Tab,
   Tabs,
   Toolbar,
@@ -10,6 +11,9 @@ import {
   useTheme,
 } from "@mui/material";
 import DrawerComp from "./DrawerComp";
+import Home from '@mui/icons-material/Home';
+import ExploreJobs from './ExploreJobs';
+import AboutUs from './AboutUs';
 
 const Navbar = () => {
   const [value, setValue] = useState(0);
@@ -40,7 +44,7 @@ const Navbar = () => {
                 value={value}
                 onChange={(e, value) => setValue(value)}
               >
-                <Tab label="Home" sx={fontStyle}/>
+                <Tab label="Home" sx={fontStyle} />
                 <Tab label="Jobs" sx={fontStyle} />
                 <Tab label="Programs" sx={fontStyle} />
                 <Tab label="About Us" sx={fontStyle} />
