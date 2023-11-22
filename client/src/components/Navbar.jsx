@@ -14,6 +14,7 @@ import DrawerComp from "./DrawerComp";
 import Home from '@mui/icons-material/Home';
 import ExploreJobs from './ExploreJobs';
 import AboutUs from './AboutUs';
+import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
   const [value, setValue] = useState(0);
@@ -44,16 +45,16 @@ const Navbar = () => {
                 value={value}
                 onChange={(e, value) => setValue(value)}
               >
-                <Tab label="Home" sx={fontStyle} />
-                <Tab label="Jobs" sx={fontStyle} />
-                <Tab label="Programs" sx={fontStyle} />
-                <Tab label="About Us" sx={fontStyle} />
-                <Tab label="Contact" sx={fontStyle} />
+                <Tab  label="Home" sx={fontStyle} component ={NavLink} to='/home' />
+                <Tab label="Jobs" sx={fontStyle}  component={NavLink} to='/jobs' />
+                <Tab label="Programs" sx={fontStyle} component={NavLink} to='/prograams' />
+                <Tab label="About Us" sx={fontStyle} component={NavLink} to='/about'/>
+                <Tab label="Contact" sx={fontStyle} component={NavLink} to='/contact'/>
               </Tabs>
-              <Button sx={{ marginLeft: "auto", color:"white", fontSize:"16px" }} color='inherit' variant="outlined">
+              <Button sx={{ marginLeft: "auto", color:"white", fontSize:"16px" }} color='inherit' variant="outlined" component = {NavLink} to='/login'> 
                 Login
               </Button>
-              <Button sx={{ marginLeft: "20px", borderColor:"white", fontSize:"16px" }} variant="contained">
+              <Button sx={{ marginLeft: "20px", borderColor:"white", fontSize:"16px" }} variant="contained" component={NavLink} to='/signup'>
                 SignUp
               </Button>
             </>
