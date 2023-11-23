@@ -1,10 +1,8 @@
-import React from 'react'
+// import React from 'react'
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Navbar from './components/Navbar'
+import Home from './components/Home';
 import { Routes } from './routes';
-// import Home from './components/Home';
-
-// import {Outlet } from 'react-router-dom'
 
 const theme = createTheme({
   palette: {
@@ -31,9 +29,8 @@ const App = () => {
           
           <Navbar />
           <Routes />
-
-          {/* <Home /> */}
-
+          <Home />
+      
       </ThemeProvider>
     </>
   )

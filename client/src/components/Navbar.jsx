@@ -1,8 +1,7 @@
-import { React, useState } from 'react'
+import { useState } from 'react'
 import {
   AppBar,
   Button,
-  Link,
   Tab,
   Tabs,
   Toolbar,
@@ -11,9 +10,13 @@ import {
   useTheme,
 } from "@mui/material";
 import DrawerComp from "./DrawerComp";
-import Home from '@mui/icons-material/Home';
-import ExploreJobs from './ExploreJobs';
-import AboutUs from './AboutUs';
+// import Home from '@mui/icons-material/Home';
+// import ExploreJobs from './ExploreJobs';
+// import AboutUs from './AboutUs';
+// import ContactUS from './ContactUs';
+// import Login from './Auth/Login';
+// import Register from './Auth/Register';
+
 import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
@@ -45,16 +48,16 @@ const Navbar = () => {
                 value={value}
                 onChange={(e, value) => setValue(value)}
               >
-                <Tab  label="Home" sx={fontStyle} component ={NavLink} to='/home' />
-                <Tab label="Jobs" sx={fontStyle}  component={NavLink} to='/jobs' />
-                <Tab label="Programs" sx={fontStyle} component={NavLink} to='/prograams' />
-                <Tab label="About Us" sx={fontStyle} component={NavLink} to='/about'/>
-                <Tab label="Contact" sx={fontStyle} component={NavLink} to='/contact'/>
+                <Tab  label="Home" sx={fontStyle} component = {NavLink} to='/home' />
+                <Tab label="Jobs" sx={fontStyle} component = {NavLink} to='/jobs' />
+                <Tab label="Programs" sx={fontStyle} component = {NavLink} to='/programs' />
+                <Tab label="About Us" sx={fontStyle} component = {NavLink} to='/about' />
+                <Tab label="Contact" sx={fontStyle} component = {NavLink} to='/contact' />
               </Tabs>
-              <Button sx={{ marginLeft: "auto", color:"white", fontSize:"16px" }} color='inherit' variant="outlined" component = {NavLink} to='/login'> 
+              <Button sx={{ marginLeft: "auto", color:"white", fontSize:"16px" }} color='inherit' variant="outlined" component = {NavLink} to='/login' > 
                 Login
               </Button>
-              <Button sx={{ marginLeft: "20px", borderColor:"white", fontSize:"16px" }} variant="contained" component={NavLink} to='/signup'>
+              <Button sx={{ marginLeft: "20px", borderColor:"white", fontSize:"16px" }} variant="contained" component = {NavLink} to='/signup'>
                 SignUp
               </Button>
             </>
