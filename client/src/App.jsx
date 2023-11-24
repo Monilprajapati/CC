@@ -2,7 +2,9 @@
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Navbar from './components/Navbar'
 import Home from './components/Home';
+
 import { Routes } from './routes';
+
 
 const theme = createTheme({
   palette: {
@@ -30,7 +32,6 @@ const App = () => {
           <Navbar />
           <Routes />
           <Home />
-      
       </ThemeProvider>
     </>
   )
