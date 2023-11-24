@@ -1,12 +1,10 @@
-import React from 'react'
+// import React from 'react'
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Navbar from './components/Navbar'
 import Home from './components/Home';
-import Categories from './components/Categories';
-import NewsLetter from './components/NewsLetter';
-import JobBox from './components/JobBox';
-import Testimonial from './components/Testimonial/Testimonial';
-import Footer from './components/Footer';
+
+import { Routes } from './routes';
+
 
 const theme = createTheme({
   palette: {
@@ -28,14 +26,12 @@ const theme = createTheme({
 const App = () => {
   return (
     <>
+
       <ThemeProvider theme={theme}>
+          
           <Navbar />
+          <Routes />
           <Home />
-          <Categories/>
-          <NewsLetter/>
-          <JobBox/>
-          <Testimonial/>
-          <Footer/>
       </ThemeProvider>
     </>
   )
