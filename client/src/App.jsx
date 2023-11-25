@@ -2,6 +2,8 @@
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Navbar from './components/Navbar'
 import Home from './components/Home';
+import Categories from './components/Categories';
+import NewsLetter from './components/NewsLetter';
 // import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 // import { Routes } from './routes';
 
@@ -31,6 +33,8 @@ const App = () => {
 
         <Navbar />
         <Home/>
+        <Categories/>
+        <NewsLetter/>
         {/* <Routes /> */}
         {/* <Router>
           <Routes>
