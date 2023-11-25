@@ -2,12 +2,12 @@
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Navbar from './components/Navbar'
 import Home from './components/Home';
-
-import { Routes } from './routes';
+// import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+// import { Routes } from './routes';
 
 
 const theme = createTheme({
-  palette: {
+  palette: {  
     primary: {
       main: '#2196F3', // Set your primary color
     },
@@ -28,10 +28,16 @@ const App = () => {
     <>
 
       <ThemeProvider theme={theme}>
-          
-          <Navbar />
-          <Routes />
-          <Home />
+
+        <Navbar />
+        <Home/>
+        {/* <Routes /> */}
+        {/* <Router>
+          <Routes>
+            <Route Component={Home} path='/'></Route>
+            {/* <Route Component={Home} path='/'></Route> */}
+        {/* </Routes> */}
+        {/* </Router> */} 
       </ThemeProvider>
     </>
   )

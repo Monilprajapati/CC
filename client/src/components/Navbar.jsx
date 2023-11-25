@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { React, useState } from 'react'
 import {
   AppBar,
   Button,
@@ -10,16 +10,11 @@ import {
   useTheme,
 } from "@mui/material";
 import DrawerComp from "./DrawerComp";
-// import Home from '@mui/icons-material/Home';
-// import ExploreJobs from './ExploreJobs';
-// import AboutUs from './AboutUs';
-// import ContactUS from './ContactUs';
-// import Login from './Auth/Login';
-// import Register from './Auth/Register';
 
-import { NavLink } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
+  // const navigate = useNavigate();
   const [value, setValue] = useState(0);
   const theme = useTheme();
   console.log(theme);
@@ -32,9 +27,9 @@ const Navbar = () => {
 
   return (
     <>
-      <AppBar sx={{fontFamily:"Montserrat"}} position='static'>
-        <Toolbar sx={{padding:"15px 0"}}>
-          <Typography sx={{ fontSize: "2rem", fontWeight:500, marginLeft:{xs:"13px", sm:"0"} } }>Udyog Sarthi</Typography>
+      <AppBar sx={{ fontFamily: "Montserrat" }} position='static'>
+        <Toolbar sx={{ padding: "15px 0" }}>
+          <Typography sx={{ fontSize: "2rem", fontWeight: 500, marginLeft: { xs: "13px", sm: "0" } }}>Udyog Sarthi</Typography>
           {isMatch ? (
             <>
               <DrawerComp />
@@ -48,16 +43,16 @@ const Navbar = () => {
                 value={value}
                 onChange={(e, value) => setValue(value)}
               >
-                <Tab  label="Home" sx={fontStyle} component = {NavLink} to='/home' />
-                <Tab label="Jobs" sx={fontStyle} component = {NavLink} to='/jobs' />
-                <Tab label="Programs" sx={fontStyle} component = {NavLink} to='/programs' />
-                <Tab label="About Us" sx={fontStyle} component = {NavLink} to='/about' />
-                <Tab label="Contact" sx={fontStyle} component = {NavLink} to='/contact' />
+                <Tab label="Home" sx={fontStyle} />
+                <Tab label="Jobs" sx={fontStyle} />
+                <Tab label="Programs" sx={fontStyle} />
+                <Tab label="About Us" sx={fontStyle} />
+                <Tab label="Contact" sx={fontStyle} />
               </Tabs>
-              <Button sx={{ marginLeft: "auto", color:"white", fontSize:"16px" }} color='inherit' variant="outlined" component = {NavLink} to='/login' > 
+              <Button sx={{ marginLeft: "auto", color: "white", fontSize: "16px" }} color='inherit' variant="outlined" >
                 Login
               </Button>
-              <Button sx={{ marginLeft: "20px", borderColor:"white", fontSize:"16px" }} variant="contained" component = {NavLink} to='/signup'>
+              <Button sx={{ marginLeft: "20px", borderColor: "white", fontSize: "16px" }} variant="contained">
                 SignUp
               </Button>
             </>
